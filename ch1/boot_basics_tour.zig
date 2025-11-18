@@ -30,6 +30,8 @@ pub fn main() !void {
     // @tagName converts the enum value to its string representation
     try stdout.print("optimize mode: {s}\n", .{@tagName(builtin.mode)});
 
+    try stdout.print("sizeof usize: {d}\n", .{@sizeOf(usize)});
+
     // Print the target triple showing CPU architecture, OS, and ABI
     // Each component is extracted from builtin.target and converted to a string
     try stdout.print(
